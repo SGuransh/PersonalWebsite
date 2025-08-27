@@ -6,13 +6,12 @@ import { ExternalLink, Github } from "lucide-react"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "SikhiHub",
       description:
-        "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
+        "A full-stack platform for NGO to organize events and plan community gatherings.",
       image: "/modern-ecommerce-interface.png",
-      technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/project",
+      technologies: ["Next.js", "TypeScript", "Java SpringBoot", "PostgreSQL", "Terraform", "Azure cloud"],
+      liveUrl: "https://sikhihub.com",
       featured: true,
     },
     {

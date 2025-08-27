@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { useToast } from "./ui/toast"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -16,13 +17,36 @@ export function ContactSection() {
     subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const toast = useToast()
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    if (isSubmitting) return
+    setIsSubmitting(true)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const payload = await res.json().catch(() => ({}))
+
+      if (!res.ok) {
+        const err = payload?.error || res.statusText
+        toast.error && toast.error("Error sending message: " + err)
+        return
+      }
+
+      toast.push({ title: "Message sent", message: "I'll get back to you via email." })
+      setFormData({ name: "", email: "", subject: "", message: "" })
+    } catch (err) {
+      console.error(err)
+      toast.error && toast.error("Failed to send message. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -70,7 +94,7 @@ export function ContactSection() {
             {contactInfo.map((info, index) => (
               <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="flex items-center p-6">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-8 bg-accent/10 rounded-full flex items-center justify-center mr-4">
                     <info.icon className="h-6 w-6 text-accent" />
                   </div>
                   <div>
@@ -145,6 +169,7 @@ export function ContactSection() {
                       onChange={handleChange}
                       required
                       rows={6}
+                      className="min-h-[110px]"
                       placeholder="Tell me about your project or idea..."
                     />
                   </div>

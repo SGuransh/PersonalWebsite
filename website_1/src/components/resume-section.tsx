@@ -18,40 +18,60 @@ export function ResumeSection() {
       company: "CGI - BMO",
       location: "Toronto, Ontario",
       period: "June 2025 - August 2025",
-      description: "Developed and maintained backend services using TypeScript on AWS Lambda.",
-      achievements: ["Delivered over 20+ pull requests", "Prototyped an agentic AI system using LangChain and LangGraph"],
+      description: "TypeScript, AWS Lambda",
+      achievements: [
+        "Delivered over 20+ pull requests",
+        "Prototyped an agentic AI system using LangChain and LangGraph",
+        "Developed and maintained backend services using TypeScript on AWS Lambda.",
+      ],
     },
     {
       title: "Software Engineer",
       company: "Sikh Sparks (Volunteer)",
       location: "Toronto, Ontario",
       period: "December 2024 - May 2025",
-      description: "Developed scalable REST APIs with Java Spring Boot and managed cloud infra on Azure using Terraform.",
-      achievements: ["Implemented Google OAuth via Keycloak", "Dockerized microservices for scalable deployments"],
+      description: "Java Spring Boot, Azure, Terraform",
+      achievements: [
+        "Implemented Google OAuth via Keycloak",
+        "Dockerized microservices for scalable deployments",
+        "Developed scalable REST APIs and managed cloud infra on Azure using Terraform.",
+      ],
     },
     {
       title: "Software Engineer",
       company: "Alfina Technology (Part-Time)",
       location: "Toronto, Ontario",
       period: "January 2025 - April 2025",
-      description: "Led a team to design and build a web & mobile app using Next.js, React, and TypeScript.",
-      achievements: ["Built Python/Polars backend to compute HHI for market concentration (75% improvement)", "Implemented OAuth + Firebase session persistence via HTTP-only cookies"],
+      description: "Next.js, React, TypeScript, Python/Polars, OAuth, Firebase",
+      achievements: [
+        "Built Python/Polars backend to compute HHI for market concentration (75% improvement)",
+        "Implemented OAuth + Firebase session persistence via HTTP-only cookies",
+        "Led a team to design and build a web & mobile app using Next.js, React, and TypeScript.",
+      ],
     },
     {
       title: "Software Developer Intern",
       company: "CGI - CIBC",
       location: "Toronto, Ontario",
       period: "May 2024 - September 2024",
-      description: "Contributed to Node.js microservices and built a monitoring tool with Prometheus/Grafana.",
-      achievements: ["Created Python POC simulator to automate test data (40% test speedup)", "Contributed 25+ PRs"],
+      description: "Node.js, Prometheus, Grafana",
+      achievements: [
+        "Created Python POC simulator to automate test data (40% test speedup)",
+        "Contributed 25+ PRs",
+        "Contributed to Node.js microservices and built a monitoring tool with Prometheus/Grafana.",
+      ],
     },
     {
       title: "Software Developer Intern",
       company: "CGI - CIBC",
       location: "Toronto, Ontario",
       period: "May 2023 - September 2023",
-      description: "Devised and implemented large-scale data processing pipelines in Python, reducing analysis time by over 99%.",
-      achievements: ["Designed an ID management system to optimize script workflows", "Collaborated on audit prep ensuring 100% compliance"],
+      description: "Python, data processing pipelines",
+      achievements: [
+        "Designed an ID management system to optimize script workflows",
+        "Collaborated on audit prep ensuring 100% compliance",
+        "Devised and implemented large-scale data processing pipelines in Python, reducing analysis time by over 99%.",
+      ],
     },
   ]
 
@@ -89,9 +109,9 @@ export function ResumeSection() {
           </Button>
         </div>
 
-  <div className="grid lg:grid-cols-1 gap-8">
-          {/* Experience */}
-          <div className="lg:col-span-2">
+  <div className="grid md:grid-cols-3 gap-8">
+          {/* Left column: Experiences + Education */}
+          <div className="md:col-span-2">
             <h3 className="text-2xl font-semibold mb-6">Experience</h3>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
@@ -101,12 +121,12 @@ export function ResumeSection() {
                       <span>{exp.title}</span>
                       <div className="flex items-center text-sm text-muted-foreground gap-4">
                         <div className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          {exp.location}
+                          <Calendar className="h-3 w-3" />
+                          <span>{exp.period}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          {exp.period}
+                          <MapPin className="h-3 w-3" />
+                          <span>{exp.location}</span>
                         </div>
                       </div>
                     </CardTitle>
@@ -114,19 +134,18 @@ export function ResumeSection() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4 text-pretty">{exp.description}</p>
-                    <ul className="list-disc list-inside space-y-1 text-sm">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="text-muted-foreground">
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
+                    {exp.achievements && exp.achievements.length > 0 && (
+                      <ul className="list-disc list-inside space-y-1 text-sm">
+                        {exp.achievements.map((achievement, i) => (
+                          <li key={i} className="text-muted-foreground">{achievement}</li>
+                        ))}
+                      </ul>
+                    )}
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            {/* Education */}
             <h3 className="text-2xl font-semibold mb-6 mt-12">Education</h3>
             <div className="space-y-6">
               {education.map((edu, index) => (
@@ -137,19 +156,35 @@ export function ResumeSection() {
                       <div className="flex items-center text-sm text-muted-foreground gap-4">
                         <div className="flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
-                          {edu.period}
+                          <span>{edu.period}</span>
                         </div>
                       </div>
                     </CardTitle>
                     <p className="text-accent font-medium">{edu.school}</p>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">GPA: {edu.gpa}</p>
+                    <p className="text-muted-foreground">{edu.gpa}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
+
+          {/* Right column: Certificates */}
+          <aside className="md:col-span-1">
+            <h3 className="text-2xl font-semibold mb-6">Certificates</h3>
+            <div className="space-y-4">
+              <a href="https://www.hashicorp.com/certification" target="_blank" rel="noopener noreferrer" className="block">
+                <div className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow">
+                  <img src="/image.png" alt="Terraform Certified Associate" className="w-40 h-auto mx-auto block" />
+                  <div className="p-3">
+                    <div className="font-semibold">Terraform</div>
+                    <div className="text-sm text-muted-foreground">Certified Associate — HCTAO-003</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </aside>
 
           {/* Technical skills removed by user request */}
         </div>

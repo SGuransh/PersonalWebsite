@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Palette, Zap } from "lucide-react"
+import { Code, Database, Zap } from "lucide-react"
 
 export function AboutSection() {
   const skills = [
@@ -25,14 +25,14 @@ export function AboutSection() {
       description: "Building scalable web applications with modern technologies and best practices.",
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating intuitive and beautiful user experiences that delight and engage.",
+      icon: Database,
+      title: "Data Engineering",
+      description: "Creating data intensive applications with cloud",
     },
     {
       icon: Zap,
-      title: "Performance Optimization",
-      description: "Optimizing applications for speed, accessibility, and search engine visibility.",
+      title: "Distributed Systems",
+      description: "Optimizing applications for speed, reliability and scalability.",
     },
   ]
 
@@ -43,8 +43,8 @@ export function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
             I'm Guransh Singh, a Computer Science Specialist at the University of Toronto with practical experience
-            building cloud-native systems, backend services, and full-stack applications. I focus on reliable,
-            maintainable systems using Python, TypeScript, and modern cloud tooling.
+            building cloud-native systems, backend services, and full-stack applications. I am aiming to specialize in databases,
+            distributed systems, and cloud computing.
           </p>
         </div>
 

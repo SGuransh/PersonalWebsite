@@ -17,10 +17,10 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="text-lg px-8 py-6" asChild>
+            <Button size="lg" className="text-lg px-8 py-6 bg-white text-black" asChild>
               <a href="#projects">View My Work</a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent" asChild>
+            <Button size="lg" className="text-lg px-8 py-6 bg-black text-white" asChild>
               <a href="#contact">Get In Touch</a>
             </Button>
           </div>
