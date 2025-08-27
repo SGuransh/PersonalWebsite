@@ -1,57 +1,75 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
+import { Badge } from "@/components/ui/badge"
 import { Download, MapPin, Calendar } from "lucide-react"
 
 export function ResumeSection() {
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      description:
-        "Led development of scalable web applications serving 100K+ users. Mentored junior developers and implemented CI/CD pipelines.",
-      achievements: [
-        "Reduced application load time by 40%",
-        "Led team of 5 developers",
-        "Implemented microservices architecture",
-      ],
+      title: "Software Developer Intern",
+      company: "Mackenzie Investments",
+      location: "Toronto, Ontario",
+      period: "September 2025 - Present",
+      description: "Scheduled to work with Python, Django, Pandas, Numpy, Scipy, Quantpy, SQL",
+      achievements: [],
     },
     {
-      title: "Full-Stack Developer",
-      company: "Digital Solutions LLC",
-      location: "Austin, TX",
-      period: "2020 - 2022",
-      description: "Developed and maintained multiple client projects using React, Node.js, and cloud technologies.",
-      achievements: ["Delivered 15+ successful projects", "Improved code quality by 60%", "Integrated payment systems"],
+      title: "Software Developer Intern",
+      company: "CGI - BMO",
+      location: "Toronto, Ontario",
+      period: "June 2025 - August 2025",
+      description: "Developed and maintained backend services using TypeScript on AWS Lambda.",
+      achievements: ["Delivered over 20+ pull requests", "Prototyped an agentic AI system using LangChain and LangGraph"],
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Agency",
-      location: "Remote",
-      period: "2019 - 2020",
-      description:
-        "Created responsive web interfaces and collaborated with design teams to implement pixel-perfect designs.",
-      achievements: ["Built 20+ responsive websites", "Improved accessibility scores", "Reduced bounce rate by 25%"],
+      title: "Software Engineer",
+      company: "Sikh Sparks (Volunteer)",
+      location: "Toronto, Ontario",
+      period: "December 2024 - May 2025",
+      description: "Developed scalable REST APIs with Java Spring Boot and managed cloud infra on Azure using Terraform.",
+      achievements: ["Implemented Google OAuth via Keycloak", "Dockerized microservices for scalable deployments"],
+    },
+    {
+      title: "Software Engineer",
+      company: "Alfina Technology (Part-Time)",
+      location: "Toronto, Ontario",
+      period: "January 2025 - April 2025",
+      description: "Led a team to design and build a web & mobile app using Next.js, React, and TypeScript.",
+      achievements: ["Built Python/Polars backend to compute HHI for market concentration (75% improvement)", "Implemented OAuth + Firebase session persistence via HTTP-only cookies"],
+    },
+    {
+      title: "Software Developer Intern",
+      company: "CGI - CIBC",
+      location: "Toronto, Ontario",
+      period: "May 2024 - September 2024",
+      description: "Contributed to Node.js microservices and built a monitoring tool with Prometheus/Grafana.",
+      achievements: ["Created Python POC simulator to automate test data (40% test speedup)", "Contributed 25+ PRs"],
+    },
+    {
+      title: "Software Developer Intern",
+      company: "CGI - CIBC",
+      location: "Toronto, Ontario",
+      period: "May 2023 - September 2023",
+      description: "Devised and implemented large-scale data processing pipelines in Python, reducing analysis time by over 99%.",
+      achievements: ["Designed an ID management system to optimize script workflows", "Collaborated on audit prep ensuring 100% compliance"],
     },
   ]
 
   const skills = [
-    { name: "JavaScript/TypeScript", level: 95 },
-    { name: "React/Next.js", level: 90 },
-    { name: "Node.js/Express", level: 85 },
-    { name: "Python/Django", level: 80 },
-    { name: "PostgreSQL/MongoDB", level: 85 },
-    { name: "AWS/Docker", level: 75 },
+    { name: "Python", level: 95 },
+    { name: "Java", level: 85 },
+    { name: "TypeScript", level: 90 },
+    { name: "AWS / Azure / Terraform", level: 85 },
+    { name: "Docker / Kubernetes", level: 80 },
+    { name: "SQL / Databases", level: 85 },
   ]
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      period: "2015 - 2019",
-      gpa: "3.8/4.0",
+      degree: "Computer Science Specialist, Stats Minor",
+      school: "University of Toronto",
+      period: "Sep. 2022 - Present",
+      gpa: "3x Dean's List Scholar",
     },
   ]
 
@@ -64,14 +82,14 @@ export function ResumeSection() {
             My professional journey and technical expertise in building digital solutions.
           </p>
           <Button size="lg" className="gap-2" asChild>
-            <a href="/resume.pdf" download>
+              <a href="/Resume_Guransh_Singh.pdf" download>
               <Download className="h-4 w-4" />
               Download Resume
             </a>
           </Button>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+  <div className="grid lg:grid-cols-1 gap-8">
           {/* Experience */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-semibold mb-6">Experience</h3>
@@ -133,25 +151,7 @@ export function ResumeSection() {
             </div>
           </div>
 
-          {/* Skills */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Technical Skills</h3>
-            <Card>
-              <CardContent className="pt-6">
-                <div className="space-y-6">
-                  {skills.map((skill, index) => (
-                    <div key={index}>
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <Progress value={skill.level} className="h-2" />
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Technical skills removed by user request */}
         </div>
       </div>
     </section>

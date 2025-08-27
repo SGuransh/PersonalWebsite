@@ -8,10 +8,11 @@ export function HeroSection() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-balance">
-              Hi, I'm <span className="text-accent">Your Name</span>
+              Hi, I'm <span className="text-accent">Guransh Singh</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Full-Stack Developer & Designer crafting digital experiences that make a difference
+              Computer Science Specialist at the University of Toronto. I build backend & cloud-native
+              systems and full-stack applications using Python, TypeScript, AWS, and Terraform.
             </p>
           </div>
 
@@ -26,19 +27,19 @@ export function HeroSection() {
 
           <div className="flex justify-center space-x-6 pt-8">
             <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/SGuransh" target="_blank" rel="noopener noreferrer">
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/guransh-singh" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="h-12 w-12" asChild>
-              <a href="mailto:your.email@example.com">
+              <a href="mailto:sguransh24.sp@gmail.com">
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
               </a>

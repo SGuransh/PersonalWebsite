@@ -36,19 +36,19 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "sguransh24.sp@gmail.com",
+      href: "mailto:sguransh24.sp@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+1 365-737-5055",
+      href: "tel:+13657375055",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Toronto, Ontario",
       href: "#",
     },
   ]
@@ -63,7 +63,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+  <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
@@ -85,8 +85,8 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card>
+          <div className="lg:col-span-2 lg:pt-8">
+            <Card className="mt-4 lg:mt-8">
               <CardHeader>
                 <CardTitle>Send me a message</CardTitle>
               </CardHeader>

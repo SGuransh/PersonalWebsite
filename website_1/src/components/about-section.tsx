@@ -4,18 +4,18 @@ import { Code, Palette, Zap } from "lucide-react"
 
 export function AboutSection() {
   const skills = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
     "Python",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Figma",
+    "Java",
+    "C/C++",
+    "TypeScript",
+    "SQL",
+    "MIPS Assembly",
     "AWS",
+    "Azure",
+    "Terraform",
     "Docker",
-    "GraphQL",
-    "MongoDB",
+    "React/Next.js",
+    "Pandas/Numpy",
   ]
 
   const highlights = [
@@ -42,8 +42,9 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            I'm a passionate developer with 5+ years of experience creating digital solutions that combine technical
-            excellence with thoughtful design.
+            I'm Guransh Singh, a Computer Science Specialist at the University of Toronto with practical experience
+            building cloud-native systems, backend services, and full-stack applications. I focus on reliable,
+            maintainable systems using Python, TypeScript, and modern cloud tooling.
           </p>
         </div>
 

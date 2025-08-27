@@ -25,7 +25,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Your Name</h3>
+            <h3 className="text-xl font-bold mb-4">Guransh Singh</h3>
             <p className="text-muted-foreground mb-4 text-pretty">
               Full-Stack Developer & Designer crafting digital experiences that make a difference.
             </p>
@@ -59,15 +59,15 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>your.email@example.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>sguransh24.sp@gmail.com</p>
+              <p>+1 (365) 737-5055</p>
+              <p>Toronto, Ontario</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} Your Name. All rights reserved.</p>
+          <p>&copy; {currentYear} Guransh Singh. All rights reserved.</p>
         </div>
       </div>
     </footer>
