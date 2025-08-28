@@ -3,8 +3,18 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
 
+interface Project {
+  title: string
+  description: string
+  image: string
+  technologies: string[]
+  liveUrl?: string
+  githubUrl?: string
+  featured?: boolean
+}
+
 export function ProjectsSection() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "SikhiHub",
       description:
