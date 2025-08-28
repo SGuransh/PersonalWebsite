@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import CategoryDropdown from "@/components/blog/category-dropdown"
 
 type Props = {
-  searchParams?: { [key: string]: string | string[] | undefined }
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }> | undefined
 }
 
 export default async function BlogIndex({ searchParams }: Props) {

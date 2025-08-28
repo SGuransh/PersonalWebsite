@@ -3,8 +3,16 @@ import Link from "next/link"
 import { getPostWithContent } from "@/lib/blog-posts"
 import { Badge } from "@/components/ui/badge"
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+type Props = {
+  // Match Next's generated PageProps shape where params is a Promise
+  params?: Promise<{ slug: string }> | undefined
+}
+
+export default async function PostPage({ params }: Props) {
+  // params may be a Promise (or plain object) depending on Next's runtime — normalize with Promise.resolve
   const p = await Promise.resolve(params)
+  if (!p || !p.slug) return notFound()
+
   const post = getPostWithContent(p.slug)
   if (!post) return notFound()
 
