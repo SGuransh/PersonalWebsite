@@ -9,7 +9,7 @@ export function ProjectsSection() {
       title: "SikhiHub",
       description:
         "A full-stack platform for NGO to organize events and plan community gatherings.",
-      image: "/modern-ecommerce-interface.png",
+      image: "/Sikhihub.png",
       technologies: ["Next.js", "TypeScript", "Java SpringBoot", "PostgreSQL", "Terraform", "Azure cloud", "SQL"],
       liveUrl: "https://sikhihub.com",
       featured: true,
@@ -18,17 +18,15 @@ export function ProjectsSection() {
       title: "Eventuary",
       description:
         "AWS hackathon winner, A full stack AWS based application targeted to student to get personalized suggestions and platform to register.",
-      image: "/task-management-dashboard.png",
+      image: "/Eventuary.png",
       technologies: ["React", "Node.js", "Python", "AWS", "Lambda", "Bedrock", "RDS"],
       liveUrl: "https://devpost.com/software/eventuary",
     },
     {
       title: "Law Ticketing System",
       description: "A real world law ticketing system, for ticket management and analytic dashboards.",
-      image: "/weather-analytics-dashboard-with-charts.png",
+      image: "/Law.png",
       technologies: ["AWS", "Python", "Lambda", "SQL", "RDS", "Data Analysis"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/project",
     },
   ]
 
@@ -63,18 +61,22 @@ export function ProjectsSection() {
                     <CardTitle className="flex items-center justify-between">
                       {project.title}
                       <div className="flex space-x-2">
-                        <Button variant="ghost" size="icon" asChild>
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="h-4 w-4" />
-                            <span className="sr-only">View source</span>
-                          </a>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                            <span className="sr-only">View live site</span>
-                          </a>
-                        </Button>
+                        {project.githubUrl && (
+                          <Button variant="ghost" size="icon" asChild>
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                              <Github className="h-4 w-4" />
+                              <span className="sr-only">View source</span>
+                            </a>
+                          </Button>
+                        )}
+                        {project.liveUrl && (
+                          <Button variant="ghost" size="icon" asChild>
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4" />
+                              <span className="sr-only">View live site</span>
+                            </a>
+                          </Button>
+                        )}
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -96,7 +98,7 @@ export function ProjectsSection() {
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild>
-            <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/sguransh" target="_blank" rel="noopener noreferrer">
               View All Projects on GitHub
             </a>
           </Button>

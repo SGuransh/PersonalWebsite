@@ -16,43 +16,43 @@ export type BlogPost = {
   content?: string
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    title: "Building Scalable React Applications with Next.js 14",
-    excerpt:
-      "Explore the latest features in Next.js 14 and learn how to build performant, scalable React applications with the new App Router.",
-    image: "/next-js-development-code-editor.png",
-    date: "2024-01-15",
-    readTime: "8 min read",
-    category: "Development",
-    slug: "building-scalable-react-applications-nextjs-14",
-  contentFile: "src/content/posts/building-scalable-react-applications-nextjs-14.html",
-  },
-  {
-    title: "The Art of API Design: Best Practices for RESTful Services",
-    excerpt:
-      "Learn the fundamental principles of designing clean, maintainable, and scalable RESTful APIs that developers love to use.",
-    image: "/api-development-rest-endpoints.png",
-    date: "2024-01-08",
-    readTime: "12 min read",
-    category: "Backend",
-    slug: "art-of-api-design-restful-services",
-  contentFile: "src/content/posts/art-of-api-design-restful-services.html",
-  },
-  {
-    title: "Modern CSS Techniques for Better User Interfaces",
-    excerpt:
-      "Discover advanced CSS techniques including Grid, Flexbox, and custom properties to create stunning user interfaces.",
-    image: "/modern-css-grid-layout-design.png",
-    date: "2024-01-01",
-    readTime: "6 min read",
-    category: "Design",
-    slug: "modern-css-techniques-better-ui",
-  contentFile: "src/content/posts/modern-css-techniques-better-ui.html",
-  },
-]
+// export const blogPosts: BlogPost[] = [
+//   {
+//     title: "Building Scalable React Applications with Next.js 14",
+//     excerpt:
+//       "Explore the latest features in Next.js 14 and learn how to build performant, scalable React applications with the new App Router.",
+//     image: "/next-js-development-code-editor.png",
+//     date: "2024-01-15",
+//     readTime: "8 min read",
+//     category: "Development",
+//     slug: "building-scalable-react-applications-nextjs-14",
+//   contentFile: "src/content/posts/building-scalable-react-applications-nextjs-14.html",
+//   },
+//   {
+//     title: "The Art of API Design: Best Practices for RESTful Services",
+//     excerpt:
+//       "Learn the fundamental principles of designing clean, maintainable, and scalable RESTful APIs that developers love to use.",
+//     image: "/api-development-rest-endpoints.png",
+//     date: "2024-01-08",
+//     readTime: "12 min read",
+//     category: "Backend",
+//     slug: "art-of-api-design-restful-services",
+//   contentFile: "src/content/posts/art-of-api-design-restful-services.html",
+//   },
+//   {
+//     title: "Modern CSS Techniques for Better User Interfaces",
+//     excerpt:
+//       "Discover advanced CSS techniques including Grid, Flexbox, and custom properties to create stunning user interfaces.",
+//     image: "/modern-css-grid-layout-design.png",
+//     date: "2024-01-01",
+//     readTime: "6 min read",
+//     category: "Design",
+//     slug: "modern-css-techniques-better-ui",
+//   contentFile: "src/content/posts/modern-css-techniques-better-ui.html",
+//   },
+// ]
 
-// export const blogPosts: BlogPost[] = []
+export const blogPosts: BlogPost[] = []
 
 export type PaginatedPosts = {
   posts: BlogPost[]
